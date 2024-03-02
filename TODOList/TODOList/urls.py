@@ -16,7 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from TODOApp.views import login_page, register_page, tasks_page, logout_page, add_tasks
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', login_page),
+    path('login/', login_page),
+    path('register/', register_page),
+    path('tasks/', tasks_page),
+    path('logout/', logout_page),
+    path('add_tasks/', add_tasks)
 ]
